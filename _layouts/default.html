@@ -1,12 +1,11 @@
-¡¡¡¡<!DOCTYPE html>
-¡¡¡¡<html>
-¡¡¡¡<head>
-¡¡¡¡¡¡¡¡<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-¡¡¡¡¡¡¡¡<title>{{ page.title }}</title>
-¡¡¡¡</head>
-¡¡¡¡<body>
-
-¡¡¡¡¡¡¡¡{{ content }}
-
-¡¡¡¡</body>
-¡¡¡¡</html>
+ã€€ã€€---
+ã€€ã€€layout: default
+ã€€ã€€title: æˆ‘çš„Blog
+ã€€ã€€---
+ã€€ã€€<h2>{{ page.title }}</h2>
+ã€€ã€€<p>æœ€æ–°æ–‡ç« </p>
+ã€€ã€€<ul>
+ã€€ã€€ã€€ã€€{% for post in site.posts %}
+ã€€ã€€ã€€ã€€ã€€ã€€<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+ã€€ã€€ã€€ã€€{% endfor %}
+ã€€ã€€</ul>
